@@ -16,7 +16,6 @@
     <link href="css/sticky-footer.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-
     <!-- Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
   </head>
@@ -28,21 +27,20 @@
       <div class="mt-1">
         <h1>Erdoğan Effect
           <iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 61px; height: 20px;" title="Twitter Tweet Button" src="https://platform.twitter.com/widgets/tweet_button.822866e4b050d0b8bbb7f5fa8ac5e58b.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&amp;related=twitterapi%2Ctwitter&amp;size=m&amp;text=#erdogan-effect%20seems%20interesting.&amp;time=1491839616274&amp;type=share&amp;url=https%3A%2F%2Fefe.me/erdogan-effect&amp;via=efeoge" data-url="https://efe.me/erdogan-effect/" frameborder="0"></iframe>
-          <a class="github-button" href="https://github.com/efe/erdogan-effect" aria-label="Star efe/erdogan-effect on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/efe/erdogan-effect" aria-label="Star efe/erdogan-effect on GitHub" style="display:none;">Star</a>
           </h1>
       </div>
       <p class="lead">A live graph about Erdoğan's speech and exchange rate. <a href="#">How it works?</a></p>
-      <canvas id="myChart" width="400" height="400"></canvas>
-      <!-- <p>News data from <a href="https://developers.hurriyet.com.tr/">Hürriyet API</a>, money rate data from <a href="https://finance.yahoo.com/">Yahoo Finance</a>.</p> -->
+      <canvas id="myChart" width="700" height="500"></canvas>
     </div>
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">This project is licensed with <a href="https://github.com/efe/erdogan-effect/blob/master/LICENSE">GPL (Version 3)</a>. See the source code from <a href="https://github.com/efe/erdogan-effect">here</a>.</span>
+        <span class="text-muted">This project is licensed with <a href="https://github.com/efe/erdogan-effect/blob/master/LICENSE">GNU GPL v3</a>.</span>
       </div>
     </footer>
 
-    <script>
+    <script type="text/javascript">
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
     type: 'line',
@@ -97,6 +95,11 @@
         }]
     },
     options: {
+        title: {
+          display: true,
+          position: 'bottom',
+          text: '15/08/2017 - 20/08/2017'
+        },
         scales: {
             xAxes: [{
                 type: 'linear',
