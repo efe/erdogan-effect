@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="../../public/images/favicon.png">
+    <meta name="description" content="A project for unfolding correlation between Erdoğan's speech and exchange rate.">
+    <meta name="author" content="Efe Öge">
+    <link rel="icon" type="image/png" href="https://efe.me/public/images/favicon.png">
 
     <title>Erdoğan Effect</title>
 
@@ -14,6 +14,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
   </head>
 
   <body>
@@ -33,5 +38,71 @@
         <span class="text-muted">This project is licensed with <a href="https://github.com/efe/erdogan-effect/blob/master/LICENSE">GPL (Version 3)</a>. See the source code from <a href="https://github.com/efe/erdogan-effect">here</a>.</span>
       </div>
     </footer>
+
+    <script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Dollar',
+            borderColor: '#85bb65',
+            backgroundColor: '#85bb65',
+            fill: false,
+            data: [{
+                x: 0,
+                y: 10
+            }, {
+                x: 3,
+                y: 20
+            }, {
+                x: 5,
+                y: 15
+            }]
+        },
+        {
+            label: 'Euro',
+            borderColor: '#1a335d',
+            backgroundColor: '#1a335d',
+            fill: false,
+            data: [{
+                x: 0,
+                y: 5
+            }, {
+                x: 3,
+                y: 10
+            }, {
+                x: 5,
+                y: 2
+            }]
+        },
+        {
+            label: 'Erdoğan',
+            borderColor: '#f8991c',
+            backgroundColor: '#f8991c',
+            fill: false,
+            data: [{
+                x: 0,
+                y: 7
+            }, {
+                x: 3,
+                y: 2
+            }, {
+                x: 5,
+                y: 22
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+    </script>
+
   </body>
 </html>
